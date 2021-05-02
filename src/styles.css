@@ -1,0 +1,56 @@
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.app-sidebar .logo-img {
+  width: auto !important;
+  display: block !important;
+}
+.grocerylogo {
+  width: 100% !important;
+}
+
+.pull-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: #000000 !important;
+  color: #fefefe;
+  cursor: default;
+}
+.btn-info.btn-raised,
+.btn-info.btn-fab {
+  background-color: black !important;
+  color: #fff !important;
+  border-color: black;
+}
+.btn-success.btn-raised,
+.btn-success.btn-fab {
+  background-color: black !important;
+  color: #fff !important;
+  border-color: black;
+}
+.filterSearch {
+  min-width: 320px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .filterSearch {
+    min-width: auto !important;
+  }
+}
+
+.logo-name {
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.logo-class {
+  width: 208px;
+  height: 36px;
+}
+.small-logo-class {
+  height: 36px;
+  width: 36px;
+}

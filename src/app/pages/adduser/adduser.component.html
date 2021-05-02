@@ -1,0 +1,83 @@
+<div class="row text-left">
+    <div class="col-sm-12">
+        <div class="content-header text-center text-primary"></div>
+    </div>
+</div>
+<div class="row text-left">
+    <div class="col-sm-12">
+        <div class="content-header text-center text-primary">Add New User</div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header pb-2"></div>
+            <div class="card-content">
+                <div class="px-3">
+                    <form class="form" #f="ngForm" (ngSubmit)="submitUser(f)">
+                        <div class="form-body">
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" class="form-control" [(ngModel)]="addUser.firstName" name="firstName" #firstName="ngModel" required />
+                                        <span class="help-block" *ngIf="firstName?.touched && firstName?.errors?.required" style="color: red;"><small>This field is required*</small></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" class="form-control" [(ngModel)]="addUser.lastName" name="lastName" #lastName="ngModel" required />
+                                        <span class="help-block" *ngIf="lastName?.touched && lastName?.errors?.required" style="color: red;"><small>This field is required*</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" id="email" class="form-control" name="email" [(ngModel)]="addUser.email" name="email" #email="ngModel" required />
+                                        <span class="help-block" *ngIf="email?.touched && email?.errors?.required" style="color: red;"><small>This field is required*</small></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="mobileNumber">Phone number</label>
+                                        <input type="text" id="mobileNumber" class="form-control" name="mobileNumber" [(ngModel)]="addUser.mobileNumber" name="mobileNumber" #mobileNumber="ngModel" required />
+                                        <span class="help-block" *ngIf="mobileNumber?.touched && mobileNumber?.errors?.required" style="color: red;"><small>This field is required*</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="text" id="password" class="form-control" name="password" [(ngModel)]="addUser.password" name="password" #password="ngModel" required />
+                                        <span class="help-block" *ngIf="password?.touched && password?.errors?.required" style="color: red;"><small>This field is required*</small></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-theme btn-raised btn-raised add-modules mr-2">
+                                <i class="fa fa-check-square-o"></i> Add User
+                            </button>
+                            <button type="button" class="btn btn-raised btn-raised btn-warning mr-1" (click)="onCancel()">
+                                 <i class="ft-x"></i> Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
